@@ -1,0 +1,21 @@
+{
+  "id": "classic-sidebar",
+  "name": "Classic Sidebar",
+  "version": "1.0.0",
+  "engine": "html-handlebars",
+  "page": {
+    "format": "A4",
+    "margin": "0mm"
+  },
+  "entry": "src/index.hbs",
+  "styles": ["src/styles.css"],
+  "partialsDir": "src/partials",
+  "schema": "schema.json",
+  "example": "example.yaml",
+  "assetsDir": "src/assets",
+  "features": {
+    "multiPage": true,
+    "clickableLinks": true,
+    "photo": "optional"
+  }
+}

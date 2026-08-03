@@ -1,0 +1,10 @@
+<li class="skill">
+  {{#if this.name}}
+    <span class="skill__name">{{this.name}}</span>
+    {{#if this.items.length}}
+      <span class="skill__items">{{#each this.items}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</span>
+    {{/if}}
+  {{else}}
+    <span class="skill__name">{{this}}</span>
+  {{/if}}
+</li>

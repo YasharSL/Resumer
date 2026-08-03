@@ -1,0 +1,250 @@
+@page {
+  size: A4;
+  margin: 0;
+}
+
+:root {
+  --ink: #212121;
+  --muted: #6f6f6f;
+  --line: #d6d6d6;
+  --line-soft: #e6e6e6;
+  --bg: #ffffff;
+  --page-pad-x: 14mm;
+  --page-pad-y: 14mm;
+  --side-width: 58mm;
+  --gap: 8mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #f3f3f3;
+  color: var(--ink);
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 10.5pt;
+  line-height: 1.45;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media screen {
+  body {
+    padding: 24px 0 48px;
+  }
+}
+
+.resume {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  padding: var(--page-pad-y) var(--page-pad-x) 16mm;
+  background: var(--bg);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+}
+
+@media print {
+  html,
+  body {
+    background: var(--bg);
+  }
+
+  .resume {
+    width: auto;
+    min-height: auto;
+    margin: 0;
+    box-shadow: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  padding-bottom: 4mm;
+  border-bottom: 1px solid var(--line);
+}
+
+.header__identity {
+  display: flex;
+  gap: 5mm;
+  align-items: flex-start;
+}
+
+.header__photo {
+  width: 22mm;
+  height: 22mm;
+  object-fit: cover;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.name {
+  margin: 0;
+  font-size: 26pt;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.role {
+  margin: 1.5mm 0 0;
+  color: var(--muted);
+  font-size: 12pt;
+  font-weight: 500;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5mm 5mm;
+  margin-top: 3.5mm;
+  color: var(--muted);
+  font-size: 9.5pt;
+}
+
+.contact {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5mm;
+}
+
+.icon {
+  width: 11px;
+  height: 11px;
+  display: block;
+}
+
+.profile {
+  padding: 4.5mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.profile__text {
+  margin: 2mm 0 0;
+  color: var(--muted);
+  max-width: 170mm;
+}
+
+.section-title {
+  margin: 0 0 3mm;
+  font-size: 12.5pt;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) var(--side-width);
+  column-gap: var(--gap);
+  align-items: start;
+  padding-top: 5mm;
+}
+
+.main {
+  min-width: 0;
+  padding-right: var(--gap);
+  border-right: 1px solid var(--line);
+}
+
+.side {
+  min-width: 0;
+}
+
+.section + .section {
+  margin-top: 5mm;
+}
+
+.job,
+.edu {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 4mm;
+}
+
+.job__head,
+.edu__head {
+  display: grid;
+  grid-template-columns: 28mm minmax(0, 1fr);
+  column-gap: 3mm;
+  align-items: start;
+}
+
+.job__dates,
+.edu__dates {
+  color: var(--muted);
+  font-size: 9.5pt;
+  padding-top: 0.4mm;
+}
+
+.job__title,
+.edu__school {
+  margin: 0;
+  font-size: 10.5pt;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.edu__degree {
+  margin: 0.8mm 0 0;
+  color: var(--muted);
+  font-size: 9.5pt;
+}
+
+.bullets {
+  margin: 2mm 0 0;
+  padding-left: 4.5mm;
+  color: var(--muted);
+}
+
+.bullets li {
+  margin: 0 0 1.2mm;
+  padding-left: 1mm;
+}
+
+.bullets li::marker {
+  color: #9a9a9a;
+  font-size: 0.85em;
+}
+
+.skills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skill {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  padding: 2.2mm 0;
+  border-bottom: 1px solid var(--line-soft);
+  font-weight: 700;
+  font-size: 10pt;
+  line-height: 1.35;
+}
+
+.skill:first-child {
+  padding-top: 0;
+}
+
+.skill__items {
+  display: block;
+  margin-top: 1mm;
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 9.5pt;
+}
+
+.section--skills .section-title {
+  margin-bottom: 2mm;
+}

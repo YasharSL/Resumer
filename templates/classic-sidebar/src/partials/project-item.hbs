@@ -1,0 +1,11 @@
+{{#if this.name}}
+  <li>
+    {{#if this.url}}
+      <a href="{{this.url}}">{{this.name}}</a>{{#if this.description}} — {{this.description}}{{/if}}
+    {{else}}
+      <strong>{{this.name}}</strong>{{#if this.description}} — {{this.description}}{{/if}}
+    {{/if}}
+  </li>
+{{else}}
+  <li>{{this}}</li>
+{{/if}}
