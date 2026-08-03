@@ -1,0 +1,44 @@
+{
+  "name": "resumer",
+  "version": "0.1.0",
+  "description": "YAML-driven multi-template resume toolkit with live preview and A4 PDF export",
+  "type": "module",
+  "bin": {
+    "resume": "./dist/cli.js"
+  },
+  "scripts": {
+    "build:ts": "tsc",
+    "preview": "tsx src/cli.ts preview",
+    "build": "tsx src/cli.ts build",
+    "build:all": "tsx src/cli.ts build-all",
+    "templates": "tsx src/cli.ts templates",
+    "template:create": "tsx src/cli.ts template-create",
+    "postinstall": "playwright install chromium"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "keywords": [
+    "resume",
+    "cv",
+    "pdf",
+    "yaml",
+    "handlebars",
+    "playwright"
+  ],
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "chokidar": "^5.0.0",
+    "commander": "^15.0.0",
+    "handlebars": "^4.7.9",
+    "playwright": "^1.62.1",
+    "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "tsx": "^4.23.5",
+    "typescript": "^7.0.2"
+  }
+}
