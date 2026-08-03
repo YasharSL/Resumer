@@ -1,0 +1,48 @@
+template: classic-sidebar
+extends: ../base.yaml
+meta:
+  outputName: example-classic-sidebar
+
+basics:
+  title: Product Engineer
+  email: john.doe@example.com
+  summary: >
+    Engineer focused on product outcomes.
+    Comfortable owning ambiguous problems from discovery through delivery.
+
+experience:
+  - role: Product Engineer
+    company: Some Startup
+    start: "2024"
+    end: present
+    highlights:
+      - Own discovery-to-delivery for the core product surface
+      - Partner with design and engineering on prioritization and release quality
+  - role: Software Engineer
+    company: Google
+    start: "2023"
+    end: "2023"
+    location: US
+    highlights:
+      - Designed and implemented AI tools for operator tools
+      - Improved usability of software through iterative prototypes
+  - role: Front-End web developer
+    company: multiple private firms
+    start: "2020"
+    end: "2022"
+    highlights:
+      - Built responsive web apps with modern JS/TS stacks
+      - Collaborated with PMs and designers on iterative product releases
+
+projects:
+  - Built personal tooling for resume versioning and PDF export
+  - Independent study in product analytics and experimentation design
+  - Open-source contributions around developer experience utilities
+
+skills:
+  - name: User feedback analysis
+  - name: Technical communication
+  - name: Roadmapping
+  - name: Python (data exploration), Databases, JS, TS
+  - name: Prototyping
+  - name: Cross-functional leadership

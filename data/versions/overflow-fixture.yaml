@@ -1,0 +1,110 @@
+# Long-content fixture for multi-page regression checks.
+template: classic-sidebar
+meta:
+  outputName: overflow-fixture
+
+basics:
+  name: John Doe
+  title: Product Engineer
+  email: john.doe@example.com
+  summary: >
+    This fixture intentionally contains many employment entries, skills, and
+    project bullets so the classic-sidebar template must flow onto a second A4
+    page without clipping. Use it when changing print CSS or column layout.
+
+profiles:
+  github:
+    url: https://github.com/...
+    label:  john.doe
+  linkedin:
+    url: https://www.linkedin.com/in/...
+    label: john.doe
+
+experience:
+  - role: Product Engineer  
+    company: Company
+    start: "2024"
+    end: present
+    highlights:
+      - Own discovery-to-delivery for the core product surface across multiple squads
+      - Partner with design and engineering on prioritization and release quality
+      - Translate customer feedback into measurable product bets and roadmap changes
+      - Establish operating cadence for planning, demos, and post-release learning
+  - role: UI/UX Engineer
+    company: Tana robotics
+    start: "2023"
+    end: "2023"
+    location: US
+    highlights:
+      - Designed and implemented interaction flows for operator tools
+      - Improved usability of dense technical interfaces through iterative prototypes
+      - Collaborated with robotics engineers on constraints and edge cases
+  - role: Front-End web developer
+    company: Orbit Labs
+    start: "2022"
+    end: "2022"
+    highlights:
+      - Shipped customer dashboards with charting and role-based access
+      - Reduced UI regressions by introducing visual checks in CI
+  - role: Front-End web developer
+    company: Northwind Digital
+    start: "2021"
+    end: "2022"
+    highlights:
+      - Built marketing and authenticated app surfaces on a shared design system
+      - Improved Core Web Vitals through image and bundle discipline
+  - role: Junior web developer
+    company: Freelance
+    start: "2020"
+    end: "2021"
+    highlights:
+      - Delivered brochure and e-commerce sites for small businesses
+      - Handled requirements gathering, implementation, and handoff documentation
+  - role: Research assistant
+    company: Some University
+    start: "2019"
+    end: "2020"
+    location: Texas, US
+    highlights:
+      - Supported lab tooling for data collection and visualization
+      - Wrote internal docs that helped onboard new student researchers
+
+education:
+  - institution: Some University
+    location: Texas, US
+    degree: MSc in Product Engineering – In Progress
+    start: "2024"
+    end: present
+  - institution: Some University
+    location: Texas, US
+    degree: BSc in Computer Engineering
+    start: "2019"
+    end: "2024"
+  - institution: Community College
+    location: Texas, US
+    degree: Transfer coursework in mathematics
+    start: "2018"
+    end: "2019"
+
+projects:
+  - Built personal tooling for resume versioning and deterministic PDF export
+  - Independent study in product analytics and experimentation design
+  - Open-source contributions around developer experience utilities
+  - Side project exploring structured writing workflows for technical specs
+  - Workshop notes on turning research interviews into prioritized backlog items
+  - Prototype of a lightweight release-health scorecard for small teams
+  - Personal knowledge base for product frameworks and decision journals
+
+skills:
+  - name: User feedback analysis
+  - name: Technical communication
+  - name: Roadmapping
+  - name: Python (data exploration), Databases, JS, TS
+  - name: Prototyping
+  - name: Cross-functional leadership
+  - name: Experiment design
+  - name: Stakeholder alignment
+  - name: Analytics instrumentation
+  - name: Mentoring
+  - name: Writing crisp PRDs
+  - name: Facilitation

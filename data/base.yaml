@@ -1,0 +1,30 @@
+# Shared defaults for your personal resume versions.
+# Version files under data/versions/ can `extends: ../base.yaml`.
+
+basics:
+  name: John Doe
+  # title: Technical Product Manager # example.yaml overrides default value
+  # email: john.doe@example.com
+profiles:
+  github:
+    url: https://..
+    label: JohnDoe
+  linkedin:
+    url: https://www.linkedin.com/in/..
+    label: JohnDoe
+
+# Optional — uncomment and point at an image path:
+# photo: ../../initial-figma-template/photo.jpg
+
+education:
+  - institution: Some University
+    location: Texas, US
+    degree: MSc in Electrical Engineering – In Progress
+    start: "2024"
+    end: present
+  - institution: Northern Ontario Business School
+    location: Sudbury, ON, Canada
+    degree: Bachelor of Business Administration
+    start: "2019"
+    end: "2024"
+
