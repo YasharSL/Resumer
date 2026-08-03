@@ -6,7 +6,7 @@ YAML-driven, multi-template resume toolkit.
 
 Edit content in YAML → live preview in the browser → export selectable, clickable A4 PDFs.
 
-## Features
+You can easily create multiple resumes for multiple positions in one go.
 
 - **Multiple versions** from shared base YAML (`extends`)
 - **Multiple templates** via a strict folder contract (`templates/<id>/`)
@@ -14,6 +14,8 @@ Edit content in YAML → live preview in the browser → export selectable, clic
 - **A4 PDF export** through Playwright - text + links are preserved
 - **Scalable sections** — add as many jobs/skills as you want; content flows to the next page
 - **Open-Source Ready** scaffold: `npm run template:create`
+
+
 
 ## Quick start
 
@@ -42,6 +44,8 @@ List templates:
 npm run templates
 ```
 
+
+
 ## Project layout
 
 ```text
@@ -55,6 +59,8 @@ src/                        # CLI + render/pdf pipeline
 docs/adding-a-template.md   # contributor contract
 out/                        # generated PDFs (gitignored)
 ```
+
+
 
 ## Authoring a version
 
@@ -90,7 +96,11 @@ profiles:
     label: you
 ```
 
+
+
 ## Templates:
+
+
 
 ## - `classic-sidebar`
 
@@ -148,6 +158,8 @@ Check that:
 - Long content flows to page 2+ without clipping
 - Photo behavior matches what you declare (`optional` / `required` / `none`)
 
+
+
 ### 4. Open the PR
 
 1. Branch from the default branch
@@ -168,6 +180,8 @@ Maintainers will check the folder contract, example render, and multi-page/link 
 - Package manager: **npm**
 - Cross-template YAML compatibility is **not** guaranteed — each template owns its schema
 
+
+
 ## Scripts
 
 
@@ -178,6 +192,8 @@ Maintainers will check the folder contract, example render, and multi-page/link 
 | `npm run build:all`                    | All `data/versions/*` |
 | `npm run templates`                    | List templates        |
 | `npm run template:create -- <id>`      | Scaffold template     |
+
+
 
 
 ## License
