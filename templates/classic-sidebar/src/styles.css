@@ -1,6 +1,7 @@
 @page {
   size: A4;
-  margin: 0;
+  /* Top/bottom apply on every printed page, including page 2+ */
+  margin: 14mm 0 16mm;
 }
 
 :root {
@@ -58,6 +59,8 @@ body {
     min-height: auto;
     margin: 0;
     box-shadow: none;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -175,8 +178,8 @@ a:hover {
 .job__head,
 .edu__head {
   display: grid;
-  grid-template-columns: 28mm minmax(0, 1fr);
-  column-gap: 3mm;
+  grid-template-columns: max-content minmax(0, 1fr);
+  column-gap: 2.5mm;
   align-items: start;
 }
 
