@@ -1,6 +1,5 @@
 <article class="edu">
   <header class="edu__head">
-    <span class="edu__dates">{{yearRange start end}}</span>
     <div class="edu__body">
       <h3 class="edu__school">
         {{institution}}{{#if location}}, {{location}}{{/if}}
@@ -9,5 +8,6 @@
         <p class="edu__degree">{{degree}}</p>
       {{/if}}
     </div>
+    <span class="edu__dates">{{yearRange start end}}</span>
   </header>
 </article>

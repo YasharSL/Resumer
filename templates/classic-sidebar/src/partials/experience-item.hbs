@@ -1,9 +1,9 @@
 <article class="job">
   <header class="job__head">
-    <span class="job__dates">{{yearRange start end}}</span>
     <h3 class="job__title">
       {{role}}{{#if company}} at ({{company}}){{/if}}{{#if location}}, {{location}}{{/if}}
     </h3>
+    <span class="job__dates">{{yearRange start end}}</span>
   </header>
   {{#if highlights.length}}
     <ul class="bullets">
