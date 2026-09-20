@@ -1,7 +1,7 @@
 @page {
   size: A4;
-  /* Top/bottom apply on every printed page, including page 2+ */
-  margin: 14mm 0 16mm;
+  /* Modest margins on every page — enough top pad on page 2+ without wasting space */
+  margin: 10mm 0 10mm;
 }
 
 :root {
@@ -29,7 +29,7 @@ body {
   font-family: "DM Sans", "Segoe UI", sans-serif;
   font-optical-sizing: auto;
   font-size: 10.5pt;
-  line-height: 1.45;
+  line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -74,7 +74,7 @@ a:hover {
 }
 
 .header {
-  padding-bottom: 4mm;
+  padding-bottom: 3.5mm;
   border-bottom: 1px solid var(--line);
 }
 
@@ -111,7 +111,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 2.5mm 5mm;
-  margin-top: 3.5mm;
+  margin-top: 3mm;
   color: var(--muted);
   font-size: 9.5pt;
 }
@@ -129,18 +129,18 @@ a:hover {
 }
 
 .profile {
-  padding: 4.5mm 0;
+  padding: 3.5mm 0;
   border-bottom: 1px solid var(--line);
 }
 
 .profile__text {
-  margin: 2mm 0 0;
+  margin: 1.5mm 0 0;
   color: var(--muted);
   max-width: 170mm;
 }
 
 .section-title {
-  margin: 0 0 3mm;
+  margin: 0 0 2.5mm;
   font-size: 12.5pt;
   font-weight: 700;
   letter-spacing: -0.02em;
@@ -151,7 +151,7 @@ a:hover {
   grid-template-columns: minmax(0, 1fr) var(--side-width);
   column-gap: var(--gap);
   align-items: start;
-  padding-top: 5mm;
+  padding-top: 4mm;
 }
 
 .main {
@@ -165,14 +165,24 @@ a:hover {
 }
 
 .section + .section {
-  margin-top: 5mm;
+  margin-top: 4mm;
 }
 
-.job,
+/* Jobs may split across pages so page 1 does not leave a large empty band.
+   Education entries stay intact and the whole Education block prefers to stay together. */
+.job {
+  margin-bottom: 3mm;
+}
+
 .edu {
   break-inside: avoid;
   page-break-inside: avoid;
-  margin-bottom: 4mm;
+  margin-bottom: 3mm;
+}
+
+.section--education {
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .job__head,
@@ -205,13 +215,13 @@ a:hover {
 }
 
 .bullets {
-  margin: 2mm 0 0;
+  margin: 1.5mm 0 0;
   padding-left: 4.5mm;
   color: var(--muted);
 }
 
 .bullets li {
-  margin: 0 0 1.2mm;
+  margin: 0 0 1mm;
   padding-left: 1mm;
 }
 
@@ -229,7 +239,7 @@ a:hover {
 .skill {
   break-inside: avoid;
   page-break-inside: avoid;
-  padding: 2.2mm 0;
+  padding: 1.8mm 0;
   border-bottom: 1px solid var(--line-soft);
   font-weight: 700;
   font-size: 10pt;
