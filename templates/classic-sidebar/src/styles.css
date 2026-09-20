@@ -171,7 +171,7 @@ a:hover {
 /* Jobs may split across pages so page 1 does not leave a large empty band.
    Education entries stay intact and the whole Education block prefers to stay together. */
 .job {
-  margin-bottom: 3mm;
+  margin-bottom: 3.5mm;
 }
 
 .edu {
@@ -188,7 +188,7 @@ a:hover {
 .job__head,
 .edu__head {
   display: grid;
-  grid-template-columns: 26mm minmax(0, 1fr); /* fixed so titles align when date lengths differ */
+  grid-template-columns: minmax(0, 1fr) 26mm; /* title first, dates right-aligned */
   column-gap: 2.5mm;
   align-items: start;
 }
@@ -197,7 +197,9 @@ a:hover {
 .edu__dates {
   color: var(--muted);
   font-size: 9.5pt;
+  text-align: right;
   padding-top: 0.4mm;
+  white-space: nowrap;
 }
 
 .job__title,
