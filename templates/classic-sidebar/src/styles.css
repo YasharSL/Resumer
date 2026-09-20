@@ -178,7 +178,7 @@ a:hover {
 .job__head,
 .edu__head {
   display: grid;
-  grid-template-columns: max-content minmax(0, 1fr);
+  grid-template-columns: 26mm minmax(0, 1fr); /* fixed so titles align when date lengths differ */
   column-gap: 2.5mm;
   align-items: start;
 }
